@@ -5,7 +5,7 @@ services:
         environment:
             TZ: "America/Mazatlan"
         ports:
-            - "10999:80"
+            - "10800:80"
         networks:
             - app-wpa-net
         restart: on-failure
