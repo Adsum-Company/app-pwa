@@ -9,7 +9,7 @@ RUN npm run build-prod
 
 FROM nginx AS nginx-app-pwa
 
-COPY --from=compile-front-app-pwa /opt/ng/dist/app-pwa /usr/share/nginx/html
+COPY --from=compile-front-app-pwa /opt/ng/dist /usr/share/nginx/html
 COPY nginx/default.conf /etc/nginx/conf.d
 
 EXPOSE 80
